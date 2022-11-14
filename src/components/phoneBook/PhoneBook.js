@@ -40,21 +40,30 @@ function PhoneBook(){
         phoneList.push(newContact) 
 
         setPhoneList(...phoneList)
-        console.log(phoneList)
+       
        
         
     }
 
     return <>
-        <label>Name:</label> <br/>
-        <input type='text' ref={nameInput}></input>  <br/>
-        <label>Phone Number:</label> <br/>
-        <input type='number' ref={phoneInput}></input> <br/>
-        <button onClick={addPhone}>Add</button>
+        <div className="left">
+            <label>Name:</label> <br/>
+            <input type='text' ref={nameInput}></input>  <br/>
+            <label>Phone Number:</label> <br/>
+            <input type='number' ref={phoneInput}></input> <br/>
+            <button onClick={addPhone}>Add</button>
+        </div>
 
-        <ul>
-        {phoneList.map((item, i) => <li>{item.name} {item.phone}</li>)}
-        </ul>
+        <div className="right">
+            {phoneList.map((item, i) => <div>
+                name: {item.name} <br/>
+                phone: {item.phone}</div>)
+                
+                }
+        </div>
+       
+       
+      
 
      
 
