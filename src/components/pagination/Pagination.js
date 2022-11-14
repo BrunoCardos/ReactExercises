@@ -7,15 +7,23 @@ function Pagination(){
     let [currentPosition, setPos] = useState(0);
 
     function next() {
+       if(currentPosition < list.length-1){
         const nextPos = currentPosition+1;
         setPos(nextPos);
         setCurrentPage(list[nextPos]);
+       } else{
+        alert("Nao pode incrementar mais");
+       }
     }
 
     function prev(){
-        const prevPos = currentPosition-1;
+        if (currentPosition > 0){
+            const prevPos = currentPosition-1;
         setPos(prevPos);
         setCurrentPage(list[prevPos]); 
+        } else {
+            alert("Nao pode decrementar mais");
+        }
     }
 
    
