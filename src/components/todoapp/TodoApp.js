@@ -29,13 +29,17 @@ function TodoApp(){
         }
       }
 
+
     
 
     return <>
     <input type='text' placeholder='Nova Tarefa' value={text} onChange={(e) => setText(e.target.value)} onKeyPress={handleKeyPress}></input>
     <button onClick={add} className='btn' >Adicionar Tarefa</button>
     <ul>
-        {list.map((task,i)=><li key={i}>{task} <button onClick={(e)=>remov(i)}>X</button></li>)}
+        {list.map((task,i)=><li key={i}>
+            {task} 
+            <button onClick={(e)=>remov(i)}>X</button>
+        </li>)}
         
     </ul>
     
