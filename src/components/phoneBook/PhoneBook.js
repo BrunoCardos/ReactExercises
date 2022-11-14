@@ -39,7 +39,7 @@ function PhoneBook(){
 
         phoneList.push(newContact) 
 
-        setPhoneList(...phoneList)
+        setPhoneList([...phoneList])
        
        
         
