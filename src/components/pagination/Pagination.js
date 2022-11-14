@@ -23,6 +23,7 @@ function Pagination(){
         setCurrentPage(list[prevPos]); 
         } else {
             alert("Nao pode decrementar mais");
+            
         }
     }
 
