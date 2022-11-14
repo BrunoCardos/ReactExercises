@@ -46,3 +46,28 @@ li button{
     border-radius: 50%;
     font-weight: bolder;
 }
+
+fieldset{
+    width: 250px;
+    margin: 200px auto;
+}
+
+fieldset legend{
+    text-align: center;
+}
+
+ input{
+    margin-bottom: 20px;
+}
+
+fieldset button{ 
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+
+fieldset span{
+    text-align: center;
+    margin: 10px auto;
+    font-weight: bold;
+}
