@@ -1,0 +1,48 @@
+*{
+    text-align: left;
+}
+
+input{
+    height: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid black;
+    padding: 5px;
+    width: 400px;
+}
+
+ul{
+    padding: 0;
+}
+
+li{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(224, 188, 119);
+    padding: 5px;
+    width: 400px;
+    margin-top: 7px;
+    list-style: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+
+.btn{
+    margin: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid black;
+    padding: 6px;
+    background-color: rgb(255, 251, 0);
+    font-weight: bold;
+}
+
+li button{
+    background-color: white;
+    color: red;
+    border-radius: 50%;
+    font-weight: bolder;
+}
