@@ -20,6 +20,9 @@ function PhoneBook(){
         }
     ])
 
+    
+    const [searchResult, setSearchResult] = useState ([])
+
 
     
     const nameInput = useRef ();
@@ -47,8 +50,15 @@ function PhoneBook(){
     }
 
     function search(){
-        const [searchResult, setSearchResult] = useState ('')
+        let res =[];
         let searchName = searchInput.current.value;
+
+        for (let contact of phoneList){
+            if (contact.name == searchName){
+                res.push(contact) 
+            }
+        }
+        setSearchResult(res)
     }
 
 
@@ -68,15 +78,24 @@ function PhoneBook(){
                 <input type="search" placeholder="Search" ref={searchInput}></input>
                 <button onClick={search}>Search</button>
             </div>
-            {searchResult.length==0 && phoneList.map((item, i) => <div><li>
+            {phoneList.map((item, i) => <div><li>
                 Name: {item.name} <br/>
                 Phone: {item.phone}</li></div>)
               }
 
-            {searchResult.length>0 && phoneList.map((item, i) => <div><li>
-                Name: {item.name} <br/>
-                Phone: {item.phone}</li></div>)
-              }
+        </div>
+
+        <div>
+
+            <h2>Result</h2>
+
+
+        {searchResult.map((contact, i)=>
+                <div key={i}><li>
+                    Name: {contact.name}<br/>
+                    Phone: {contact.phone}
+                </li></div>
+            )}
         </div>
        
 
