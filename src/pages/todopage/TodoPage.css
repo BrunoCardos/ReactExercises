@@ -71,3 +71,60 @@ fieldset span{
     margin: 10px auto;
     font-weight: bold;
 }
+
+.phone{
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+
+.left{
+    margin-top: 20px;
+    background-color: rgb(224, 188, 119);
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 20px;
+    max-height: 300px;
+}
+
+.left input{
+    width: 250px;
+}
+
+.left button{
+    width: 260px;
+    height: 35px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10px;
+    background-color: aqua;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.right{
+    background-color: aqua;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.right div li{
+    max-width: 300px;
+}
+
+.flex input{
+    max-width: 220px;
+    height: 33px;
+}
+
+.flex button{
+    height: 35px;
+    background-color:  rgb(224, 188, 119);
+    border-radius: 10px;
+    font-weight: bold;
+    width: 80px;
+    text-align: center;
+    cursor: pointer;
+}
