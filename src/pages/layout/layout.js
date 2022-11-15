@@ -10,6 +10,7 @@ const Layout = () => {
             <Link to="/videos" className="menu-item">Videos</Link>
             <Link to="/counterPage" className="menu-item">Counter Pages</Link>
             <Link to="/TodoPage" className="menu-item">Todo Pages</Link>
+            <Link to="/TablePage" className="menu-item">Tabe Page</Link>
       </nav>
 
       <Outlet />

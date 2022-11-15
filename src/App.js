@@ -6,6 +6,7 @@ import Videos from './pages/videos/videos';
 import Layout from './pages/layout/layout';
 import CounterPage from './pages/counterPage/CounterPage';
 import TodoPage from './pages/todopage/TodoPage';
+import TablePage from './pages/tablePage/TablePage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="videos" element={<Videos />} />
           <Route path="counterPage" element={<CounterPage />} />
           <Route path="todoPage" element={<TodoPage />} />
+          <Route path="tablePage" element={<TablePage />} />
         </Route>
       </Routes>
     </BrowserRouter>
