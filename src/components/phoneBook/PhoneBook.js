@@ -44,6 +44,9 @@ function PhoneBook(){
         phoneList.push(newContact); 
 
         setPhoneList([...phoneList]);
+
+        nameInput.current.value=null
+        phoneInput.current.value=null
        
        
         
@@ -86,9 +89,6 @@ function PhoneBook(){
         </div>
 
         <div>
-
-            <h2>Result</h2>
-
 
         {searchResult.map((contact, i)=>
                 <div key={i}><li>
