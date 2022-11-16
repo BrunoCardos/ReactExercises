@@ -18,7 +18,7 @@ function Table(props){
                 <td>{item.gender}</td>
             </tr>
        
-    )}
+             )}
     </table>
     )
 }
