@@ -18,15 +18,27 @@ function WordCount(){
 
         let spl = wordValue.split(' ')
 
+
+
+        // ###############################################################################
+        //############################      ISTO     #####################################
+
         // let fltr = spl.filter( word => word == wordSearchValue)
 
         // setWordCnt(fltr.length)
 
-        for (let element of spl){
-            if (element == wordSearchValue){
-                setWordCnt(wordCnt+1)
+
+        // ###############################################################################
+        //############################    OU  ISTO     ####################################
+
+        
+            let count=0
+            for(let i=0; i<spl.length; i++){
+                if(wordSearchValue==spl[i])
+                    count++;
             }
-        }
+            setWordCnt(count);
+        
 
       }
 
