@@ -2,6 +2,7 @@ import { useState } from "react"
 import Table from "../../components/table/Table"
 import WordCount from "../../components/wordCount/WordCout"
 import Clock from "../../components/clock/Clock"
+import WordCountV2 from "../../components/wordCountV2/WordCoutV2"
 import './TablePage.css'
 
 
@@ -52,7 +53,8 @@ function TablePage(){
 
      {/* <Table list={list} myFun={remov}/> */}
      
-     <WordCount /> 
+     <WordCount /> <br/>
+     <WordCountV2 />
      <Clock />
     </>
 }

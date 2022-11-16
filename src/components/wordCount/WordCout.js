@@ -3,29 +3,38 @@ import { useRef, useState } from "react"
 function WordCount(){
 
     const [wordCnt, setWordCnt] = useState(0);
-    const [charCnt, setCharCnt] = useState(0);
-    const [lineCnt, setLineCnt] = useState(0);
- 
+
+   
 
 
 
-     function handleChange(event) {
-        let wordValue = event.target.value;
-        let countWord = wordValue.split(/\s+/).length
-        let countChar = wordValue.length
-        let countLine = wordValue.split(/\n/).length
-  
-       setWordCnt(countWord)
-       setCharCnt(countChar)
-       setLineCnt(countLine)
+    const word = useRef();
+    const wordSearch = useRef();
+
+     function search() {
+        let wordValue = word.current.value;
+        let wordSearchValue = wordSearch.current.value;
+
+
+        let spl = wordValue.split(' ')
+
+        // let fltr = spl.filter( word => word == wordSearchValue)
+
+        // setWordCnt(fltr.length)
+
+        for (let element of spl){
+            if (element == wordSearchValue){
+                setWordCnt(wordCnt+1)
+            }
+        }
+
       }
 
-
     return <>
-        <textarea onChange={handleChange}></textarea> <br/>
-        <span>Word: {wordCnt}</span>   <br/>
-        <span>Caracter: {charCnt}</span> <br/>
-        <span>Lines: {lineCnt}</span>
+        <textarea ref={word}></textarea> <br/>
+        <input type='text' ref={wordSearch}></input> <br/>
+        <button onClick={search}>Search</button>
+        <span>{wordCnt} </span>  <br/>
     </>
 }
 
