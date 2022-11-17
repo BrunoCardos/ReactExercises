@@ -26,6 +26,7 @@ function Search(){
 
     }
     setSearchResult(results)
+    
     if(sch == ""){
         setSearchResult([])
     }
