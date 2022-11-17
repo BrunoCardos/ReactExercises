@@ -22,12 +22,14 @@ function Search(){
         for(let item of task){
             if (item.toLowerCase().includes(sch.toLowerCase())) {
                 results.push(item);
-        }
+            }
 
-    }
-    setSearchResult(results)
+        }
+       
+        setSearchResult(results)
+
     
-    if(sch == ""){
+        if(sch == ""){
         setSearchResult([])
     }
 }
