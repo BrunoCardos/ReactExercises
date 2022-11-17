@@ -4,6 +4,7 @@ import WordCount from "../../components/wordCount/WordCout"
 import Clock from "../../components/clock/Clock"
 import WordCountV2 from "../../components/wordCountV2/WordCoutV2"
 import './TablePage.css'
+import Search from "../../components/search/Search"
 
 
 
@@ -53,9 +54,10 @@ function TablePage(){
 
      {/* <Table list={list} myFun={remov}/> */}
      
-     <WordCount /> <br/>
-     <WordCountV2 />
+     {/* <WordCount /> <br/>
+     <WordCountV2 /> */}
      <Clock />
+     <Search/>
     </>
 }
 export default TablePage
